@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestor de Tráfego</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chewy&family=League+Spartan:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="styles-novo.css">
+    <link rel="stylesheet" href="media-queries.css">
+</head>
+<body>
+
+<!-- Pop-up (Inicialmente oculto) -->
+<div id="popup-overlay" class="popup-overlay"></div>
+<div id="popup" class="popup">
+    <div class="popup-content">
+        <div class="popup-images">
+            <img src="Pedro LP - CONHECIMENTOS-1.png" alt="Imagem 1">
+            <img src="Pedro LP - CONHECIMENTOS-2.png" alt="Imagem 2">
+        </div>
+        <button class="close-popup" id="close-popup-btn">Fechar</button>
+    </div>
+</div>
+
+
+
+<!-- Novo Pop-up (Inicialmente oculto) -->
+<div id="popup-overlay-2" class="popup-overlay"></div>
+<div id="popup-2" class="popup">
+    <div class="popup-content">
+        <div class="popup-images">
+          <h2>Resultado 1</h2>
+            <img src="Print-1.jpg" alt="Imagem 1" class="active">
+            <img src="Print-2.jpg" alt="Imagem 2">
+            <img src="Print-3.jpg" alt="Imagem 3">
+        </div>
+        <button class="close-popup" id="close-popup-btn-2">Fechar</button>
+    </div>
+</div>
+
+
+
+
+    <section class="section-1">
+        <nav class="menu">
+            <div class="menu-left">Pedro B. Malfatti</div>
+            <div class="menu-center">GESTOR DE TRÁFEGO</div>
+            <div class="menu-right">
+                <button class="participar-btn" id="participarBtn">
+  <span class="material-icons">bolt</span> PARTICIPE
+</button>
+            </div>
+        </nav>
+        <div class="cards-container">
+            <div class="card card-1">
+              <div class="foto-sua">
+                <img src="Pedro.png" alt="Pedro Malfatti">
+              </div>
+                <div class="card-content">
+                    <div class="nome">PEDRO <br> MALFATTI</div>
+                    <div class="subtitulo">Gestor de Tráfego</div>
+                    <span class="material-icons icon-right">rocket_launch</span>
+                </div>
+            </div>
+            <div class="card card-2">
+                <img src="cerebro.png" alt="Imagem 1">
+                <div class="card-content">
+                    <div class="titulo">Conhecimentos</div>
+                    <div class="subtitulo">Saber é poder</div>
+                    <span id="icon-arrow" class="material-icons icon-right">arrow_forward</span>
+                </div>
+            </div>
+            <div class="card card-3">
+                <img src="Resultados.png" alt="Imagem 2">
+                <div class="card-content">
+                    <div class="titulo">Resultados</div>
+                    <div class="subtitulo">Metas Alcançadas</div>
+                    <span id="icon-arrow" class="material-icons icon-right">arrow_forward</span>
+                </div>
+            </div>
+            <div class="card card-4">
+                <img src="malfadiaz.png" alt="Imagem 3">
+                <div class="card-content">
+                    <div class="titulo">AGÊNCIA</div>
+                    <span id="icon-arrow" class="material-icons icon-right">arrow_forward</span>
+                </div>
+            </div>
+            <div class="card card-5">
+                <div class="logos-scroll">
+                    <img src="LOGO-SLICED.png" alt="Logo 1">
+                    <img src="LOGO VPLUS.png" alt="Logo 2">
+                    <img src="LOGO-INVESTORES.png" alt="Logo 3">
+                </div>
+                <div class="card-content">
+                    <div class="titulo">Nossos clientes</div>
+                    <div class="subtitulo">Prioridade Total</div>
+                    <span class="material-icons icon-right">star</span>
+                </div>
+            </div>
+            <div class="card card-6">
+                <img src="orcamento.png" alt="Imagem 4">
+                <div class="card-content">
+                    <div class="titulo">Orçamento</div>
+                    <div class="subtitulo">Justo e Claro</div>
+                    <span id="icon-arrow" class="material-icons icon-right">arrow_forward</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section-2">
+    <div class="cards-container">
+        <div class="card-large card-1">
+            <div class="small-card">
+                <div class="numero">+1</div>
+                <div class="subtitulo">ano de</div>
+                <div class="subtitulo">experiência</div>
+            </div>
+            <div class="small-card">
+                <div class="numero">+250%</div>
+                <div class="subtitulo">alcance do</div>
+                <div class="subtitulo">faturamento</div>
+            </div>
+            <div class="small-card">
+                <div class="numero">100%</div>
+                <div class="subtitulo">aproveitamento</div>
+            </div>
+        </div>
+        <!-- Renomeado para card-section-2-secundario -->
+        <div class="card-section-2-secundario">
+            <div class="frase">Buscando o <span class="amarelo">sucesso</span></div>
+        </div>
+    </div>
+    <div class="social-icons">
+        <img src="Instagram.png" alt="Instagram" id="instagramImg">
+        <img src="Whatsapp.png" alt="WhatsApp" id="whatsappImg">
+    </div>
+</section>
+
+
+
+    <script>
+  document.getElementById('participarBtn').addEventListener('click', function() {
+    window.open("https://api.whatsapp.com/send/?phone=5511949101948&text=Ol%C3%A1%2C+estou+interessado+no+seu+servi%C3%A7o+de+gest%C3%A3o+de+tr%C3%A1fego&type=phone_number&app_absent=0", "_blank");
+  });
+</script>
+
+<script>
+  document.getElementById('instagramImg').addEventListener('click', function() {
+    window.open("https://www.instagram.com/vendas_turbinadas_?igsh=NzBndWlxeW9uOWJi", "_blank");
+});
+</script>
+
+<script>
+  document.getElementById('whatsappImg').addEventListener('click', function() {
+    window.open("https://api.whatsapp.com/send/?phone=5511949101948&text=Ol%C3%A1%2C+estou+interessado+no+seu+servi%C3%A7o+de+gest%C3%A3o+de+tr%C3%A1fego&type=phone_number&app_absent=0", "_blank");
+  });
+</script>
+    <script src="script.js"></script>
+</body>
+</html>

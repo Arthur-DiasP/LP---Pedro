@@ -1,0 +1,375 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #101010;
+    color: white;
+}
+
+section {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+    background-color: #101010;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+}
+
+.menu-left, .menu-center {
+    font-size: 1.5em;
+}
+
+.menu-right /* Efeito 3D e mudança de cor suave no botão */
+.participar-btn {
+    background-color: #FFB10F;
+    color: white;
+    border: none;
+    font-weight:700;
+    font-size:18px;
+    border-radius: 10px;
+    padding: 10px 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease; /* Transições suaves para transformação, sombra e cor */
+}
+
+/* Efeito ao passar o cursor no botão */
+.participar-btn:hover {
+    transform: translateY(-5px) scale(1.1); /* Levanta o botão e aumenta seu tamanho */
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2); /* Adiciona uma sombra 3D */
+    background-color: #E29800; /* Mudança suave para uma cor mais escura */
+}
+
+
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Adiciona o efeito 3D suave */
+.card {
+    background-color: #333;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 300px;
+    height: 33vh;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Adiciona transição suave */
+}
+
+.card:hover {
+    transform: translateY(-10px) scale(1.05); /* Dá um pequeno "levantar" no card e aumenta um pouco o tamanho */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Aplica uma sombra para o efeito 3D */
+}
+
+/* Efeito 3D no card-1 */
+.card-1:hover {
+    transform: translateY(-10px) scale(1.05); /* Levanta e aumenta o card */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Sombra 3D */
+}
+
+/* Efeito 3D nos outros cards */
+.card-2:hover, .card-3:hover, .card-4:hover, .card-5:hover, .card-6:hover {
+    transform: translateY(-10px) scale(1.05); /* Levanta e aumenta o card */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Sombra 3D */
+}
+
+
+.card-1 {
+    display: flex;
+    flex-direction: row;
+    width: 40%;
+    position: relative; /* Necessário para o fundo da imagem */
+}
+
+.card-1 .foto-sua {
+    background: #FFB10F;
+    border-top-right-radius: 40px;
+    border-bottom-right-radius: 40px;
+    border-left: none; /* Sem borda esquerda */
+}
+
+
+.card-1 img {
+    width: 60%;
+    height: auto;
+    margin-top: -40px; /* Subindo a imagem */
+    margin-left: 45px;
+    object-fit: cover;
+    border-radius: 10px; /* Torna a borda da imagem arredondada */
+}
+
+.card-1 .card-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 70%;
+    padding: 15px;
+    text-align: left; /* Alinha o texto à esquerda */
+}
+
+.card-1 .card-content .nome,
+.card-1 .card-content .subtitulo {
+    margin-left: 25px; /* Movendo título e subtítulo para a esquerda */
+}
+
+
+/* Centraliza as imagens nos cards 2, 3, 4 e 6 da section-1 */
+.card-2 img, .card-3 img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 65%; /* Ou qualquer outra largura desejada */
+    height: auto;
+    object-fit: cover; /* Garante que a imagem ocupe o espaço corretamente sem distorção */
+    margin-bottom: 10px; /* Adiciona espaço abaixo da imagem */
+}
+
+.card-4 img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 65%; /* Ou outra largura desejada */
+    height: auto;
+    object-fit: cover;
+    margin-bottom: 25px;
+    margin-top: -25px; /* Empurrando a imagem para cima */
+}
+
+
+
+/* Adiciona maior distanciamento entre as imagens no card-5 */
+.card-5 .logos-scroll {
+    display: flex;
+    justify-content: center; /* Centraliza as imagens no contêiner */
+    gap: 80px; /* Aumenta o espaçamento entre as imagens */
+}
+
+.card-5 .logos-scroll img {
+    width: 25%; /* Ajusta a largura das imagens para garantir que todas caibam */
+    height: auto; /* Mantém a proporção das imagens */
+    object-fit: contain; /* Garante que as imagens não distorçam e ocupem o espaço corretamente */
+}
+
+/* Remove o distanciamento após a última imagem */
+.card-5 .logos-scroll img:last-child {
+    margin-right: 0;
+}
+
+.card-5 img {
+    display: block;
+    width: 35%;
+    height: auto;
+    object-fit: cover;
+    margin-bottom: 10px;
+    margin-top: 20px; /* Adicionando espaço acima da imagem */
+}
+
+.card-5 .card-content {
+    padding: 15px;
+    margin-top: -0px; /* Deslocando o conteúdo (título e subtítulo) para baixo */
+}
+
+
+
+
+.card-6 img {
+    display: block;
+    margin-left: auto;
+margin-right: auto;
+    width: 35%;
+    height: auto;
+    object-fit: cover;
+    margin-bottom: 10px;
+    margin-top: 20px; /* Adicionando espaço acima da imagem */
+}
+
+.card-6 .card-content {
+    padding: 15px;
+    margin-top: 20px; /* Deslocando o conteúdo (título e subtítulo) para baixo */
+}
+
+
+.card-2, .card-3, .card-4, .card-6 {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Alinha o conteúdo ao topo */
+    flex-direction: column; /* Organiza o conteúdo dentro do card de forma vertical */
+}
+
+.card-5{
+  width: 40%;
+}
+
+/* Ajusta o título e subtítulo para ficarem mais para cima nos cards 2, 3 e 4 */
+.card-2 .card-content,
+.card-3 .card-content,
+.card-4 .card-content {
+  margin-top: -50px;
+  /* Ajuste a distância conforme necessário */
+}
+
+.card-content {
+    padding: 15px;
+}
+
+.nome {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.titulo {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.subtitulo {
+    font-size: 0.9em;
+    color: #aaa;
+}
+
+.icon-right {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
+
+#icon-arrow {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px; /* Ajuste o padding conforme necessário */
+    border: 2px solid white; /* Borda branca */
+    border-radius: 50%; /* Borda arredondada */
+    background-color: transparent; /* Fundo transparente */
+}
+
+
+
+.logos-scroll {
+    display: flex;
+    overflow: hidden;
+    white-space: nowrap;
+    animation: scroll-right 10s linear infinite; /* Alterado para rolar para a direita */
+}
+
+@keyframes scroll-right {
+    0% { transform: translateX(-100%); } /* Começa fora da tela à esquerda */
+    100% { transform: translateX(100%); } /* Move para fora da tela à direita */
+}
+
+
+.section-2 .cards-container {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  width: 80%;
+}
+
+/* Efeito 3D nos cards da section-2 */
+.card-large:hover, .card-section-2-secundario:hover {
+    transform: translateY(-10px) scale(1.05); /* Levanta e aumenta o card */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Sombra 3D */
+}
+
+/* Cards na section-2 */
+.card-large {
+    width: 48%;
+    height: 30vh;
+    background-color: #333;
+    border-radius: 10px;
+    padding: 20px;
+    display: flex; /* Flexbox para alinhar as small-cards */
+    justify-content: space-between; /* Espaço entre as small-cards */
+    align-items: center; /* Alinha as small-cards no centro verticalmente */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transição suave */
+}
+
+.card-section-2-secundario {
+    width: 48%;
+    height: 30vh;
+    background-color: #333;
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    justify-content: flex-start; /* Alinha a frase à esquerda */
+    align-items: center; /* Alinha a frase no centro verticalmente */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transição suave */
+}
+
+.small-card {
+    width: 30%; /* Ajusta a largura das small-cards para ficarem lado a lado */
+    text-align: center;
+    margin-bottom: 0; /* Remove o espaçamento inferior */
+}
+
+.numero {
+  font-size: 2em;
+  font-weight: bold;
+}
+
+.card-section-2-secundario {
+    width: 48%;
+    height: 30vh;
+    background-color: #333;
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    justify-content: flex-start; /* Alinha a frase à esquerda */
+    align-items: center; /* Alinha a frase no centro verticalmente */
+}
+
+.frase {
+    font-size: 60px;
+    width:70%;
+    font-family: "Chewy", serif;
+    font-weight: 400;
+    text-align: left; /* Garante que o texto da frase fique alinhado à esquerda */
+}
+
+.amarelo {
+    color: #FFB10F;
+}
+
+/* Section-2 - Centralizando as imagens Instagram e Whatsapp */
+.social-icons {
+    display: flex;
+    gap: 80px;
+    margin-top: 50px;
+    justify-content: center; /* Centraliza as imagens horizontalmente */
+    align-items: center; /* Centraliza as imagens verticalmente */
+    width: 100%; /* Garante que as imagens ocupem toda a largura */
+}
+
+/* Efeito 3D nos ícones sociais */
+.social-icons img {
+    width: 10%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transição suave */
+}
+
+.social-icons img:hover {
+    transform: translateY(-5px) scale(1.1); /* Dá um pequeno "levantar" e aumenta um pouco o tamanho */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Aplica uma sombra para o efeito 3D */
+}
